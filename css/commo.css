@@ -1,0 +1,156 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-round_down:before {
+    content: "\e63a";
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模型 border与padding不撑大盒子 */
+    box-sizing: border-box;
+}
+
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+/* 去掉li 的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+a {
+    color: #fff;
+    text-decoration: none
+}
+
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    /* perspective: 400px; */
+    -webkit-font-smoothing: antialiased;
+    background-color: #333333;
+    /* font: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif; */
+    
+    color: #666
+}
+.clearfix:after{
+    content:"";  /*设置内容为空*/
+    height:0;  /*高度为0*/
+    line-height:0;  /*行高为0*/
+    display:block;  /*将文本转为块级元素*/
+    visibility:hidden;  /*将元素隐藏*/
+    clear:both;  /*清除浮动*/
+}
+
+.w {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, .4);
+    line-height: 80px;
+    padding: 0 50px;
+    color: #fff;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: 50px;
+    width: 230px;
+    box-shadow: 0px 0px 5px 4px rgb(255 255 255 / 65%);
+}
+
+.header .hdtext {
+    float: left;
+}
+
+.header .hdtext h2 {
+    float: left;
+}
+
+.header .hdtext p {
+    line-height: 90px;
+    /* margin-left: 20px; */
+    float: left;
+}
+
+.header ul li {
+    float: left;
+    margin: 0 10px;
+    height: 50px;
+}
+
+.header ul li:hover::after {
+    transform: rotate(225deg);
+}
+
+.header ul li::after {
+    vertical-align: middle;
+    content: "◤";
+    display: inline-block;
+    color: #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+.header ul li a {
+
+    padding: 5px 20px;
+}
+
+.header .but {
+    float: right;
+}
+
+footer{
+    margin-top: 50px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .4);
+}
+footer .box{
+    height: 100%;
+    display: flex;
+}
+footer .box div{
+    padding: 50px;
+    text-align: center;
+    flex: 1;
+}
+footer .box div i{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+footer .box div i img{
+    width: 100%;
+    height: 100%;
+}
+footer .box div p{
+    margin-top: 10px;
+}
